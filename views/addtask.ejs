@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Panel</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+
+
+</head>
+<style>
+  body {
+    background-image: url(https://i.pinimg.com/564x/db/66/de/db66deee6d72dc1623469116c43422c4.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+    background-position: bottom;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+  }
+
+  .container {
+    height: 96vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .containerp {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 70px;
+    flex-direction: column;
+  }
+
+  .slide {
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+    margin: 40px;
+    padding: 50px;
+    gap: 153px;
+  }
+
+  @media (max-width: 1100px) {
+    .slide {
+      flex-wrap: wrap;
+      margin: 40px 10px;
+      padding: 30px;
+      gap: 30px;
+    }
+
+    .slide>* {
+      flex: 1 1 calc(50% - 30px);
+      box-sizing: border-box;
+    }
+  }
+
+
+
+
+  .form {
+    width: 500px;
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px;
+    background: rgba(86, 109, 131, 0.418);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.295);
+    backdrop-filter: blur(2.3px);
+    -webkit-backdrop-filter: blur(2.3px);
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    overflow: hidden;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transform: rotateX(10deg);
+    transition: all 0.3s ease-in-out;
+    animation: form-animation 0.5s ease-in-out;
+  }
+
+  .form:hover {
+    background-color: #03cdff2f;
+  }
+
+  @keyframes form-animation {
+    from {
+      transform: rotateX(-30deg);
+      opacity: 0;
+    }
+
+    to {
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+  }
+
+  .input {
+    padding: 8px;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: transparent;
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    color: rgb(255, 255, 255);
+    border: 2px solid #ffffff69;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(3, 3, 3, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
+
+  .input::placeholder {
+    color: #ffffff;
+  }
+
+  .input:hover,
+  .input:focus {
+    border-color: #3b8df2;
+    background-color: rgba(0, 53, 160, 0.2);
+    transform: scale(1.01) rotateY(10deg);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.608);
+    outline: none;
+  }
+
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #070f5398;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transform: rotateX(-10deg);
+    transition: all 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.463) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
+
+  button:hover {
+    background-color: #0276ba;
+    font-size: 17px;
+    transform: scale(1.01) rotateY(10deg) rotateX(10deg);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
+
+  /* -----------------  select tag  box ------------ */
+  #ccd {
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.932);
+    font-family: 'Merienda', cursive;
+    animation-name: Customise-Card;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  @keyframes Customise-Card {
+    from {
+      text-shadow: 0px 0px 5px #fff, 0px 0px 5px #614ad3;
+    }
+
+    to {
+      text-shadow: 0px 0px 20px #fff, 0px 0px 20px #614ad3;
+    }
+  }
+
+  .items {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .items a {
+    text-decoration: none !important;
+  }
+
+
+  .top {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    --bg: #01ab6fd0;
+    --text-color: #fff;
+    position: relative;
+    width: 235px;
+    height: 50px;
+    padding: 11px;
+    border: none;
+    background: var(--bg);
+    color: var(--text-color);
+    /* font-weight: bold; */
+    text-transform: uppercase;
+    transition: 0.2s;
+    border-radius: 5px;
+    opacity: 0.8;
+    box-shadow: #168c57 0px 7px 2px, #000 0px 8px 5px;
+  }
+
+  .top:hover {
+    opacity: 1;
+
+  }
+
+  .top:active {
+    top: 4px;
+    box-shadow: #c0392b 0px 3px 2px, #000 0px 3px 5px;
+  }
+
+  /* .content {
+        position: absolute;
+        top: 15%;
+        margin-left: 390px;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        background-image: linear-gradient(-20deg, #b253df 0%, #21d5fdcc 100%);
+        color: #fff;
+        text-align: center;
+    } */
+
+  .tag {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    background-image: linear-gradient(to top, #354077 40%, #5925b9ef 60%);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .sag {
+    display: inline;
+    font-size: larger;
+    padding: 10px 17px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    background-image: linear-gradient(to top, #354077 40%, #5925b9ef 60%);
+    font-weight: bolder;
+
+  }
+
+
+  .opt {
+    background-color: #0088ff8b;
+    color: #27134ad2;
+    font-size: larger;
+    font-weight: 700;
+    font-family: sans-serif;
+    border-radius: 25px;
+    padding: 5px;
+  }
+
+  input::file-selector-button {
+    background-image: linear-gradient(135deg, #200b6def 0%, #005896ed 70%);
+    border: 0;
+    border-radius: 8px;
+    color: #ffffff;
+    padding: 8px;
+    text-shadow: 0 1px 1px #333;
+    transition: all 0.25s;
+  }
+
+  input::file-selector-button:hover {
+    background-position-x: 100%;
+    transform: scale(1.1);
+  }
+
+  /* ------------- tabel ----------------------  */
+
+  .table-wrapper {
+    background: #fff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    overflow-x: auto;
+
+  }
+
+  .table-title {
+    background: #112843;
+    color: #fff;
+    padding: 11px;
+    border-radius: 3px 3px 0 0;
+  }
+
+  .table-title h2 {
+    margin: 0;
+    font-size: 28px;
+  }
+
+  table.table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+
+  th {
+    font-size: 20px;
+    color: #1d4270;
+  }
+
+  td {
+    font-size: 20px;
+
+  }
+
+  table.table th,
+  table.table td {
+    text-align: center;
+    color: #152f4e;
+
+    border: 1px solid #ddd;
+  }
+
+  table.table th:first-child,
+  table.table td:first-child {
+    min-width: 50px;
+    /* Minimum width for first column */
+  }
+
+  table.table th:last-child,
+  table.table td:last-child {
+    min-width: 100px;
+    /* Minimum width for last column */
+  }
+
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #ffffff;
+  }
+
+  .table-striped.table-hover tbody tr:hover {
+    background: #f3f0f0ee;
+    border: 1px solid #f8f8f8;
+  }
+
+  table.table th i {
+    font-size: 13px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+
+  table.table td:last-child i {
+    font-size: 22px;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+
+  table.table td a {
+    font-weight: bold;
+    color: #566787;
+    text-decoration: none;
+  }
+
+
+
+  .box {
+    height: 110px;
+    width: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box img {
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+  }
+
+
+
+
+  .edit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    padding: 9px;
+    color: white !important;
+    background-color: #0e6d68;
+    border-radius: 7px;
+  }
+
+  .delete {
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    padding: 9px;
+    color: white !important;
+    background-color: #F44336;
+  }
+
+
+
+  .dada {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+  }
+
+  .dada .heading2 {
+    background-color: white;
+    width: 180px;
+    font-size: 20px;
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 12px;
+  }
+
+  .heading2 a:hover {
+    text-decoration: none;
+  }
+
+  .form-control,
+  .des {
+    text-transform: capitalize;
+  }
+
+  .heading1 h2 {
+    color: white !important;
+  }
+</style>
+
+<body>
+
+  <div class="container mt-5 mb-0">
+    <div class="items">
+      <h1 id="ccd">Add Panel</h1>
+      <a href="/alltask">
+        <h2 class="top">Go to Panel</h2>
+      </a>
+    </div>
+
+    <form class="form" action="/addtask" method="post" enctype="multipart/form-data">
+
+      <select class="input menu" name="task" placeholder="Add Members">
+        <option class="opt" disabled selected>Select task</option>
+        <option class="opt">Five ways that can develop your business</option>
+        <option class="opt">Designing Better Links For Websites & Emails </option>
+        <option class="opt">Guids To Newly Supported MOdern Css Pseudo </option>
+      </select>
+
+      <select class="input menu" name="description">
+        <option class="opt" disabled selected>Description</option>
+        <option class="opt">sit amet, tyorem consectetur dolor sit orem consectetu orem ipsum dolor consect elit.</option>
+        <option class="opt">ipsum dolor sit amet consectetu orem ipsum dolor sit orem consectetu orem ipsum consectetur. </option>
+        <option class="opt">consectetur ghorem adipisicing elit. Earum. consectetu orem ipsumrem ipsum dolor sit amet.</option>
+      </select>
+      <input placeholder="date" class="input" type="date" name="date" required>
+
+      <input type="file" class="input" name="image" required>
+      <button type="submit" value="add task">Submit</button>
+
+    </form>
+  </div>
+
+  <div class="containerp mt-5" id="content">
+    <div class="table-wrapper">
+      <div class="table-title">
+        <div class="dada">
+          <div class="heading1">
+            <h2>Content <b>Tabel</b></h2>
+          </div>
+          <div class="heading2">
+            <a href="/"><i class="fas fa-list-alt"></i> Create Panel </a>
+          </div>
+        </div>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th>Task</th>
+              <th>Date</th>
+              <th>Description</th>
+              <th>Images</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% tasks.forEach(task=> { %>
+            <tr>
+              <td class="des">
+                <%= task.task %>
+              </td>
+              <td class="des">
+                <%= task.date %>
+              </td>
+              <td class="des">
+                <%= task.description %>
+              </td>
+              <td>
+                <div class="box">
+                  <img src="http://localhost:3000/uploads/<%= task.image %>" alt="">
+                </div>
+              </td>
+              <td class="ding">
+                <a href="/update/<%= task._id %>" class="edit"><i class="fas fa-edit"></i></a>
+                <br><br>
+                <a href="/delete/<%= task._id %>" class="delete"><i class="fas fa-trash-alt"></i></a>
+              </td>
+            </tr>
+            <% }); %>
+          </tbody>
+
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+
+
+</body>
+
+</html>

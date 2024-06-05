@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel</title>
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-DEbexs3wpoH8QVoeQm5K4jXy47idK6j/5VkxJ+bx4yql+3Q/nZkpBUyP0O8cBM+f" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(90deg,
+        #000000 0%,
+        #000000 48%,
+        #000000 100%);
+  }
+
+  .containerp {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 88px;
+
+  }
+
+  .slide {
+    display: flex;
+    flex-direction: column;
+    padding: 31px 80px;
+    gap: 60px;
+  }
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 175px;
+    margin-bottom: -23px;
+  }
+
+  .tat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 155px;
+  }
+
+  .tat p {
+    color: rgb(5, 19, 36);
+    letter-spacing: 1px;
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    width: 200px;
+  }
+
+  .custom-hr {
+    width: 37px;
+    border-top: 1.6px solid #1669e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2px;
+  }
+
+
+  .top1 {
+    width: 50%;
+  }
+
+  .top2 img {
+    width: 140px;
+    margin: 3px;
+
+  }
+
+
+
+  .top h1 {
+    color: rgb(10, 36, 66);
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 63px;
+  }
+
+  @media (max-width: 1100px) {
+    .slide {
+      flex-wrap: wrap;
+      margin: 40px 10px;
+      padding: 30px;
+      gap: 30px;
+    }
+
+    .slide>* {
+      flex: 1 1 calc(50% - 30px);
+      box-sizing: border-box;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+  }
+
+  .card {
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(207, 207, 207, 0.432);
+  }
+
+  .card-body {
+    padding: 18px 33px 20px 22px;
+  }
+
+  .card-body:hover {
+    border: 1px solid rgb(19, 74, 255);
+    border-top: none;
+    border-radius: 0 0 15px 15px;
+    box-sizing: border-box;
+  }
+
+  .card-text {
+    color: rgba(13, 45, 82, 0.842);
+    font-size: 18px;
+  }
+
+  .card-body button {
+    color: rgb(255, 255, 255);
+    padding: 19px;
+    margin: 11px 22px 0 0;
+    width: 190px;
+    background-origin: padding-box;
+    background-color: rgba(7, 80, 216, 0.911);
+    border: white;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  .card-body button:hover {
+    background-color: #0F243E;
+  }
+
+  .card-title {
+    color: #0F243E;
+    font-weight: 700;
+    font-size: 25px;
+    margin-top: 10px;
+  }
+
+  .card-img-top {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .box {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    width: 330px;
+    padding: 0 5px;
+    background-color: rgb(19, 83, 201);
+    margin: 0 7px;
+    border-radius: 7px;
+    position: absolute;
+    top: calc(100% - 310px);
+    left: 48%;
+    transform: translateX(-50%);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .box h5,
+  .box span {
+    display: block;
+  }
+
+  .box h5 {
+    font-size: 18px;
+    color: #ffffff;
+    margin: 10px 0px;
+  }
+
+  .box span {
+    font-size: 18px;
+    color: #ffffff;
+    margin: 10px;
+  }
+
+  .box img {
+    height: 17px;
+    border-radius: 4px;
+    margin: 6px 0 10px 11px;
+
+  }
+
+  .box span img {
+    height: 27px;
+    margin: -2px -4px 2px 0px;
+
+  }
+</style>
+
+<body>
+
+  <div class="containerp">
+    <div class="slide">
+      <div class="top">
+        <div class="top1">
+          <div class=tat>
+            <p>LATEST BLOG </p>
+            <hr class="custom-hr">
+          </div>
+          <h1>Innovative solutions for a better tomorrow</h1>
+        </div>
+        <div class="top2">
+          <a href="/addtask"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ3uiJ9hw5VZ6d_6SfywQepWrnixX2d5JhifssNxVBwr1z8bC5ojNzjHKf7VLjaFuMVg&usqp=CAU" alt=""></a>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <% tasks.forEach(task=> { %>
+          <div class="col mb-5">
+            <div class="card h-100">
+              <img src="http://localhost:3000/uploads/<%= task.image %>" class="card-img-top" alt="Skyscrapers" />
+              <div class="box">
+                <h5> &nbsp;<img class="dam" src="/images/cc.png" alt="">&nbsp;&nbsp; <%= task.date %>
+                </h5>
+                <span><img src="/images/pp.png" alt=""> Ismail</span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  <%= task.task %>
+                </h5>
+                <p class="card-text">
+                  <%= task.description %>
+                </p>
+                <div id="bom">
+                  <button type="button">Read More</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <% }) %>
+
+
+
+          <!-- <div class="col mb-3">
+                        <div class="card h-100">
+                            <img src="https://wp2023.kodesolution.com/congrow/wp-content/uploads/2023/09/new14-672x448.jpg"
+                                class="card-img-top" alt="Los Angeles Skyscrapers" />
+                            <div class="box">
+                                <h5> <img class="dam" src="/images/cc.png" alt="">
+                                    January 31, 2024 </h5>
+                                <span><img src="/images/pp.png" alt=""> Ismail</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Designing Better Links For Websites & Emails</h5>
+                                <p class="card-text">
+                                    sit amet consectetur adipisicing elit. Maiores fugit nihil numquam magna .
+                                </p>
+                                <div>
+                                    <button type="button">Read More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-3">
+                        <div class="card h-100">
+                            <img src="https://wp2023.kodesolution.com/congrow/wp-content/uploads/2023/09/new11-672x448.jpg"
+                                class="card-img-top" alt="Palm Springs Road" />
+
+                            <div class="box">
+                                <h5> <img class="dam" src="/images/cc.png" alt="">
+                                    January 31, 2024 </h5>
+                                <span><img src="/images/pp.png" alt=""> Ismail</span>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Guide To Newly Suppord Modern CSS Pseudo</h5>
+                                <p class="card-text">
+                                    sit amet consectetur adipisicing elit. Maiores fugit nihil numquam magna .
+                                </p>
+                                <div>
+                                    <button type="button">Read More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>
